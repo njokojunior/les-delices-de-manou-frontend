@@ -1,0 +1,115 @@
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { LuChefHat } from "react-icons/lu";
+import Button from "../ui/Button";
+
+const Footer = () => {
+  return (
+    <footer className="bg-violet-900 text-violet-50 grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-4 lg:px-20 xl:px-24 lg:py-15 lg:justify-items-center p-7 gap-6">
+      <div className="flex flex-col gap-6">
+        <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl">
+          <LuChefHat className="p-0 m-0" />
+          <span className="font-bold font-[Monteserrat] tracking-[-2px] md:tracking-[-4px]">
+            Les Délices de Gabi
+          </span>
+        </div>
+
+        <p>
+          Nous vous apportons de délicieuses gourmandises faites maison,
+          préparées avec des saveurs authentiques et des ingrédients frais.
+        </p>
+
+        <div className="flex items-center gap-3">
+          <FaFacebook className="fill-white rounded-full bg-violet-300 hover:fill-violet-700 hover:bg-white p-2 cursor-pointer h-10 w-10" />
+          <FaInstagram className="fill-white rounded-full bg-violet-300 hover:fill-violet-700 hover:bg-white p-2 cursor-pointer h-10 w-10" />
+          <FaXTwitter className="fill-white rounded-full bg-violet-300 hover:fill-violet-700 hover:bg-white p-2 cursor-pointer h-10 w-10" />
+          <FaWhatsapp className="fill-white rounded-full bg-violet-300 hover:fill-violet-700 hover:bg-white p-2 cursor-pointer h-10 w-10" />
+        </div>
+
+        <div></div>
+      </div>
+
+      <div>
+        <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
+          <span className="font-bold">Liens Rapides</span>
+        </div>
+
+        <ul className="flex flex-col gap-3 mt-3">
+          {[
+            { text: "Accueil", link: "#hero" },
+            { text: "A propos", link: "#about" },
+            { text: "Menu", link: "#" },
+          ].map((el) => (
+            <Button
+              variant="none"
+              className="!shadow-none hover:shadow-none p-0! hover:text-white "
+              shape="square"
+              href={el.link}
+            >
+              {el.text}
+            </Button>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
+          <span className="font-bold">Nos Offres</span>
+        </div>
+
+        <ul className="flex flex-col gap-3 mt-3">
+          {[
+            { text: "Evenements", link: "#hero" },
+            { text: "Marriage", link: "#about" },
+            { text: "Soutenance", link: "#" },
+          ].map((el) => (
+            <Button
+              variant="none"
+              className="!shadow-none hover:shadow-none p-0! hover:text-white "
+              shape="square"
+              href={el.link}
+            >
+              {el.text}
+            </Button>
+          ))}
+        </ul>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
+          <span className="font-bold">NewsLetter</span>
+        </div>
+        <p>
+          Abonnez-vous pour recevoir nos offres spéciales et nos dernières
+          actualités.
+        </p>
+        <form className="flex flex-wrap gap-2 w-full ">
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="bg-violet-50 placeholder:text-gray-400 p-2 rounded-l-md"
+          />
+          <Button
+            type="submit"
+            shape="pill"
+            className="rounded-l-none cursor-pointer"
+          >
+            Abonnez-vous
+          </Button>
+        </form>
+      </div>
+      <hr className="mt-6 border border-violet-700 col-span-full justify-self-stretch" />
+
+      <small className="mt-3 col-span-full justify-self-stretch text-center">
+        &copy;2025 Les Délices de Gabi. Tous droits réservés
+      </small>
+    </footer>
+  );
+};
+
+export default Footer;
