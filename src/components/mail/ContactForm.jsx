@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../ui/Button";
 import { FaPlane } from "react-icons/fa6";
+import env from "react-dotenv"; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const ContactForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:3000/message", {
+      const response = await fetch(`${env.BASE_URL}/message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
