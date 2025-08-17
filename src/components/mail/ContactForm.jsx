@@ -10,14 +10,20 @@ const ContactForm = () => {
     subject: "", // Subject of the message
     message: "", // User's message
   });
+
+  const apiUrl = process.env.REACT_APP_API_URL;
+
+  if (!apiUrl) {
+    alert("API URL is missing. Check your Vercel env variables.");
+    return;
+  }
   
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      console.log(process.env.REACT_APP_API_URL);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/message`, {
+      const response = await fetch(`${apiUrl}/message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
