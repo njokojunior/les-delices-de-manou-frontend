@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -9,6 +9,35 @@ import { LuChefHat } from "react-icons/lu";
 import Button from "../ui/Button";
 
 const Footer = () => {
+  const [email,setEmail] = useState("");
+  const handleNewsletterSubmit = (event) => {
+    event.preventDefault();
+
+    const apiUrl = import.meta.env.VITE_API_URL;
+    
+    if (!email) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    fetch(`${apiUrl}/newsletter`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("Subscription successful!", data);
+      })
+      .catch((error) => {
+        alert("Error subscribing to newsletter:", error);
+      }).finally(() => {
+        setEmail("");
+      });
+    
+    
+  };
   return (
     <footer className="bg-violet-900 text-violet-50 grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-4 lg:px-20 xl:px-24 lg:py-15 lg:justify-items-center p-7 gap-6">
       <div className="flex flex-col gap-6">
@@ -39,7 +68,7 @@ const Footer = () => {
           <span className="font-bold">Liens Rapides</span>
         </div>
 
-        <ul className="flex flex-col gap-3 mt-3">
+        <div className="flex flex-col gap-3 mt-3">
           {[
             { text: "Accueil", link: "#hero" },
             { text: "A propos", link: "#about" },
@@ -50,11 +79,12 @@ const Footer = () => {
               className="!shadow-none hover:shadow-none p-0! hover:text-white "
               shape="square"
               href={el.link}
+              key={el.link}
             >
               {el.text}
             </Button>
           ))}
-        </ul>
+        </div>
       </div>
 
       <div>
@@ -62,7 +92,7 @@ const Footer = () => {
           <span className="font-bold">Nos Offres</span>
         </div>
 
-        <ul className="flex flex-col gap-3 mt-3">
+        <div className="flex flex-col gap-3 mt-3">
           {[
             { text: "Evenements", link: "#hero" },
             { text: "Marriage", link: "#about" },
@@ -73,11 +103,12 @@ const Footer = () => {
               className="!shadow-none hover:shadow-none p-0! hover:text-white "
               shape="square"
               href={el.link}
+              key={el.link}
             >
               {el.text}
             </Button>
           ))}
-        </ul>
+        </div>
       </div>
 
       <div className="flex flex-col gap-3">
@@ -88,11 +119,15 @@ const Footer = () => {
           Abonnez-vous pour recevoir nos offres spéciales et nos dernières
           actualités.
         </p>
-        <form className="flex flex-wrap gap-2 w-full ">
+        <form
+          onSubmit={handleNewsletterSubmit}
+          className="flex flex-wrap gap-2 w-full "
+        >
           <input
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             placeholder="Your Email"
-            className="bg-violet-50 placeholder:text-gray-400 p-2 rounded-l-md"
+            className="bg-violet-50 placeholder:text-gray-400 text-violet-700 p-2 rounded-l-md"
           />
           <Button
             type="submit"

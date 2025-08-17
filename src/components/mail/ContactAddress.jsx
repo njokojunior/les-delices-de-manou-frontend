@@ -30,7 +30,7 @@ const ContactAddress = () => {
             text: "njokogabrielle@gmail.com",
           },
         ].map((el) => (
-          <div className="flex gap-2 items-center text-md md:text-lg lg:text-xl">
+          <div key={el.text} className="flex gap-2 items-center text-md md:text-lg lg:text-xl">
             <el.icon className="fill-violet-700" />
             <p>{el.text}</p>
           </div>

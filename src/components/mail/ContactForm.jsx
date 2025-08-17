@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../ui/Button";
 import { FaPlane } from "react-icons/fa6";
-// import env from "react-dotenv"; 
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,18 +11,10 @@ const ContactForm = () => {
     message: "", // User's message
   });
 
-  
-  
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const apiUrl = import.meta.env.VITE_API_URL;
-
-    if (!apiUrl) {
-      alert("API URL is missing. Check your Vercel env variables.");
-      return;
-    }
 
     try {
       const response = await fetch(`${apiUrl}/message`, {
@@ -33,13 +25,14 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-      warn("Message sent successfully!", data);
+      await response.json();
       // Optionally, reset the form or show a success message
       setFormData({ uname: "", email: "", subject: "", message: "" });
+      return alert("Message sent successfully!");
     } catch (error) {
-      alert("Error submitting form:", error);
-      return;
+      return alert(
+        error.message || "An error occurred while sending the message."
+      );
     }
   };
 

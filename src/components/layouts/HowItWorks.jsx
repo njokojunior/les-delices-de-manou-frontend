@@ -52,6 +52,7 @@ const HowItWorks = () => {
             stroke={el.stroke}
             title={el.title}
             count={el.count}
+            key={el.count}
           ></IconBox>
         ))}
       </div>

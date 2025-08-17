@@ -34,7 +34,7 @@ const Nav = () => {
       </div>
       <ul className="hidden  lg:flex  md:gap-1 lg:gap-9 xl:items-center">
         {menu.map((el) => (
-          <li>
+          <li key={el.text}>
             <Button
               variant="none"
               className="!shadow-none hover:shadow-none hover:border-b-2 hover:border-b-violet-700 xl:text-2xl lg:text-xl  transition-all"
@@ -47,7 +47,7 @@ const Nav = () => {
         ))}
       </ul>
       <Button
-        href="tel:5814461643"
+        href="tel:+15814461643"
         size="lg"
         className="hidden! lg:flex!  lg:items-s lg:gap-1.5 lg:items-center"
       >
