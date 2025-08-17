@@ -11,16 +11,18 @@ const ContactForm = () => {
     message: "", // User's message
   });
 
-  const apiUrl = process.env.REACT_APP_API_URL;
-
-  if (!apiUrl) {
-    alert("API URL is missing. Check your Vercel env variables.");
-    return;
-  }
+  
   
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const apiUrl = import.meta.env.VITE_API_URL;
+
+    if (!apiUrl) {
+      alert("API URL is missing. Check your Vercel env variables.");
+      return;
+    }
 
     try {
       const response = await fetch(`${apiUrl}/message`, {
