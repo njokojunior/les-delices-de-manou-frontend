@@ -16,7 +16,8 @@ const ContactForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}message`, {
+      console.log(process.env.REACT_APP_API_URL);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
