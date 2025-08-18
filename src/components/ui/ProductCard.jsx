@@ -29,20 +29,16 @@ const ProductCard = (props) => {
           <p
             className={clsx(
               colorVariants[props.variant],
-              "sm:text-sm md:text-base"
+              "text-sm md:text-base"
             )}
           >
-            CAD &nbsp;${props.price}
+          {props.price}
           </p>
         </div>
 
-        <p className="text-stone-600 text-xs mt-2 md:mt-4 md:text-sm ">
+        <p className="text-stone-600 text-xs mt-3 md:mt-4 md:text-sm ">
           {props.description}
         </p>
-
-        <Button href="#" variant={props.variant} className="mt-2">
-          Add to Cart
-        </Button>
       </div>
     </li>
   );

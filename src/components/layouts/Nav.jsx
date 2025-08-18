@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "/logo-icon.svg";
 import { LuChefHat, LuPhoneCall } from "react-icons/lu";
 import Button from "../ui/Button";
 
@@ -25,7 +24,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-violet-50 flex items-center justify-between relative p-4 lg:px-20 xl:px-24 lg:text-xl xl:text-2xl">
+    <nav className="bg-violet-50 flex items-center justify-between relative py-4 px-10 lg:px-20 xl:px-24 lg:text-xl xl:text-2xl">
       <div className="text-violet-700 md:text-2xl text-xl bg-red-400  flex gap-1 items-center lg:text-4xl">
         <LuChefHat className="text-violet-700 p-0 m-0" />
         <span className="font-bold font-[Montserrat] tracking-[-2px] md:tracking-[-4px]">

@@ -9,7 +9,7 @@ const IconBox = (props) => {
             props.stroke && "fill-violet-700"
           } text-5xl lg:text-7xl text-violet-700 `}
         />
-        <p className="absolute bg-rose-400 text-xs w-4 h-4 text-white  sm:w-5 sm:h-5 md:w-7 md:h-7 top-0 right-0 rounded-full flex items-center md:-top-1 md:-right-2 lg:top-0 lg:right-0 justify-center">
+        <p className="absolute bg-rose-400 text-[9px] w-4 h-4 text-white  sm:w-5 sm:h-5 md:w-7 md:h-7 top-0 right-0 rounded-full flex items-center md:-top-1 md:-right-2 lg:top-0 lg:right-0 justify-center">
           {props.count}
         </p>
       </div>

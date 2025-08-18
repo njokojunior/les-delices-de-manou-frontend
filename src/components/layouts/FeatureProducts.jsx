@@ -12,7 +12,7 @@ const FeatureProducts = () => {
       description:
         "Découvrez notre gâteau maison sans crème, simple et savoureux. Moelleux à l'intérieur et délicatement doré à l'extérieur.",
       color: "red",
-      price: 298,
+      price: 'Nature',
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const FeatureProducts = () => {
       description:
         "Croquettes maison, légèrement sucrées et délicieusement croustillantes.Une texture parfaite et un goût subtil pour des instants de plaisir à partager.",
       color: "rose",
-      price: 298,
+      price: 'Nature',
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const FeatureProducts = () => {
       description:
         "Légères et délicatement sucrées, parfaites pour toutes les envies. Fines et moelleuses, elles se dégustent nature ou accompagnées.",
       color: "emerald",
-      price: 298,
+      price: 'Nature',
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ const FeatureProducts = () => {
       description:
         "Appréciez la fraîcheur authentique de notre yaourt nature fait maison, disponible avec ou sans sucre selon vos préférences. ",
       color: "amber",
-      price: 298,
+      price: 'Nature',
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ const FeatureProducts = () => {
       description:
         "Légèrement sucrée, naturellement acidulée et pleine de saveur, cette infusion locale est idéale pour se désaltérer tout en profitant de ses bienfaits.",
       color: "blue",
-      price: 298,
+      price: 'Nature',
     },
 
     {
@@ -63,11 +63,11 @@ const FeatureProducts = () => {
       description:
         "Parfait pour accompagner vos petits-déjeuners, goûters ou pauses gourmandes. Un vrai plaisir à chaque bouchée !",
       color: "pink",
-      price: 298,
+      price: 'Nature',
     },
   ];
   return (
-    <section id="feature" className="px-4 py-6 bg-white md:py-20 lg:py-40">
+    <section id="feature" className="px-4 py-20 bg-white md:py-20 lg:py-40">
       <h2 className="font-bold text-2xl/8 md:text-3xl/12  lg:text-5xl/18 text-center text-violet-700">
         Featured Products
       </h2>

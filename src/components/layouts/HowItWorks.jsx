@@ -31,20 +31,17 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section
-      id="process"
-      className="px-4 py-6 bg-white sm:py-15 md:py-20 lg:pt-40"
-    >
+    <section id="process" className="px-4 py-20 bg-white sm:py-15  lg:pt-40">
       <h2 className="font-bold text-2xl/8 md:text-3xl/12  lg:text-5xl/18 text-center text-violet-700">
         Notre Processus de Commande
       </h2>
 
-      <p className="text-center text-stone-600 text-sm lg:text-xl lg:mt-2">
+      <p className="text-center text-stone-600 mt-1 text-xs lg:text-xl lg:mt-2">
         Suivez ces étapes simples, de la commande à la livraison, pour savourer
         nos délices en toute tranquillité.
       </p>
 
-      <div className="flex py-7 px-4 sm:mt-6 md:mt-9 lg:px-20 xl:px-24 lg:mt-28 gap-6">
+      <div className="grid grid-cols-2  py-7 px-4 mt-6 md:mt-9 sm:grid-cols-3 lg:px-20 xl:px-24 lg:mt-28 gap-6">
         {process.map((el) => (
           <IconBox
             icon={el.icon}

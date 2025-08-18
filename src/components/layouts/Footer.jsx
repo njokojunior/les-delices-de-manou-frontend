@@ -40,7 +40,7 @@ const Footer = () => {
   };
   return (
     <footer className="bg-violet-900 text-violet-50 grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-4 lg:px-20 xl:px-24 lg:py-15 lg:justify-items-center p-7 gap-6">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3">
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl">
           <LuChefHat className="p-0 m-0" />
           <span className="font-bold font-[Monteserrat] tracking-[-2px] md:tracking-[-4px]">
@@ -48,7 +48,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <p>
+        <p className="text-xs md:text-sm">
           Nous vous apportons de délicieuses gourmandises faites maison,
           préparées avec des saveurs authentiques et des ingrédients frais.
         </p>
@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
           <span className="font-bold">NewsLetter</span>
         </div>
-        <p>
+        <p className="text-xs md:text-sm">
           Abonnez-vous pour recevoir nos offres spéciales et nos dernières
           actualités.
         </p>

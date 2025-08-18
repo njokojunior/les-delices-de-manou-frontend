@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React from "react";
+
 
 const Button = ({
   variant = "violet",
@@ -28,7 +28,7 @@ const Button = ({
   };
 
   const baseStyles =
-    "inline-block transition-all font-medium shadow hover:shadow-md focus:outline-none focus:ring-2 focus-ring-offset-2 sm:text-sm sm:py-1 sm:px-3 md:text-base md:py-2 md:px-4 lg:text-lg lg:py-3 lg:px-6";
+    "inline-block transition-all font-medium shadow hover:shadow-md focus:outline-none focus:ring-2 focus-ring-offset-2 text-xs py-2 px-3 md:text-base  lg:text-lg lg:py-3 lg:px-6";
 
   const classes = clsx(
     baseStyles,
