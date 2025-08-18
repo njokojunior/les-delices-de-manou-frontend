@@ -91,7 +91,7 @@ const ContactForm = () => {
           shape="pill"
           type="submit"
         >
-          Send Message &rarr; 
+          Passez votre commande &rarr;
         </Button>
       </form>
     </div>
