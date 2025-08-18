@@ -9,12 +9,12 @@ import { LuChefHat } from "react-icons/lu";
 import Button from "../ui/Button";
 
 const Footer = () => {
-  const [email,setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const handleNewsletterSubmit = (event) => {
     event.preventDefault();
 
     const apiUrl = import.meta.env.VITE_API_URL;
-    
+
     if (!email) {
       alert("Please enter a valid email address.");
       return;
@@ -32,18 +32,17 @@ const Footer = () => {
       })
       .catch((error) => {
         alert("Error subscribing to newsletter:", error);
-      }).finally(() => {
+      })
+      .finally(() => {
         setEmail("");
       });
-    
-    
   };
   return (
     <footer className="bg-violet-900 text-violet-50 grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-4 lg:px-20 xl:px-24 lg:py-15 lg:justify-items-center p-7 gap-6">
       <div className="flex flex-col gap-3">
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl">
           <LuChefHat className="p-0 m-0" />
-          <span className="font-bold font-[Monteserrat] tracking-[-2px] md:tracking-[-4px]">
+          <span className="font-bold font-[Monteserrat] tracking-[-2px] md:tracking-[-4px] ">
             Les Délices de Gabi
           </span>
         </div>
@@ -65,12 +64,12 @@ const Footer = () => {
 
       <div>
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
-          <span className="font-bold">Liens Rapides</span>
+          <span className="font-bold tracking-[0px] uppercase">Liens Rapides</span>
         </div>
 
         <div className="flex flex-col gap-3 mt-3">
           {[
-            { text: "Accueil", link: "#hero" },
+            { text: "Accueil", link: "#accueil" },
             { text: "À propos", link: "#about" },
             { text: "Menu", link: "#" },
           ].map((el) => (
@@ -89,7 +88,7 @@ const Footer = () => {
 
       <div>
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
-          <span className="font-bold">Nos Offres</span>
+          <span className="font-bold tracking-[0px] uppercase">Nos Offres</span>
         </div>
 
         <div className="flex flex-col gap-3 mt-3">
@@ -113,7 +112,7 @@ const Footer = () => {
 
       <div className="flex flex-col gap-3">
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
-          <span className="font-bold">Notre newsletter</span>
+          <span className="font-bold tracking-[0px] uppercase">Notre newsletter</span>
         </div>
         <p className="text-xs md:text-sm">
           Abonnez-vous pour recevoir nos offres spéciales et nos dernières
@@ -127,12 +126,12 @@ const Footer = () => {
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             placeholder="Your Email"
-            className="bg-violet-50 placeholder:text-gray-400 text-violet-700 p-2 rounded-l-md"
+            className="bg-violet-50 placeholder:text-gray-400 text-violet-700 p-2 text-xs md:text-md rounded-l-md"
           />
           <Button
             type="submit"
             shape="pill"
-            className="rounded-l-none cursor-pointer"
+            className="rounded-l-none cursor-pointer text-xs md:text-sm "
           >
             Abonnez-vous
           </Button>
