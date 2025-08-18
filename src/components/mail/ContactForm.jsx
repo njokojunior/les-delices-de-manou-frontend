@@ -87,11 +87,11 @@ const ContactForm = () => {
         ></textarea>
 
         <Button
-          className="cursor-pointer flex! items-center justify-center gap-1"
+          className="cursor-pointer  col-span-2 self-start gap-1 "
           shape="pill"
           type="submit"
         >
-          Send Message <FaPlane />
+          Send Message &rarr; 
         </Button>
       </form>
     </div>

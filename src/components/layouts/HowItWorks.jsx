@@ -31,7 +31,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="process" className="px-4 py-20 bg-white sm:py-15  lg:pt-40">
+    <section id="process" className="px-4 py-20 bg-white  lg:py-40">
       <h2 className="font-bold text-2xl/8 md:text-3xl/12  lg:text-5xl/18 text-center text-violet-700">
         Notre Processus de Commande
       </h2>
@@ -41,7 +41,7 @@ const HowItWorks = () => {
         nos délices en toute tranquillité.
       </p>
 
-      <div className="grid grid-cols-2  py-7 px-4 mt-6 md:mt-9 sm:grid-cols-3 lg:px-20 xl:px-24 lg:mt-28 gap-6">
+      <div className="grid grid-cols-2  py-7 px-4 mt-6 md:mt- sm:grid-cols-3 lg:px-20 xl:px-24 lg:mt-28 gap-6">
         {process.map((el) => (
           <IconBox
             icon={el.icon}

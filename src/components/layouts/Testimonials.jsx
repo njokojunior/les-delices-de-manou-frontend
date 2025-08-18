@@ -14,7 +14,7 @@ const Testimonials = () => {
       </p>
 
       <blockquote className="mt-3 md:mt-5 lg:mt-7 ">
-        <p className="text-xs/5 italic  text-violet-50 font-light md:text-base lg:text-2xl">
+        <p className="text-xs/5 italic  text-violet-50 font-light md:text-sm lg:text-2xl">
           Le kebab était parfaitement assaisonné et le beignet soufflé m&apos;a
           rappelé mon enfance. Je commanderai sans hésiter à nouveau ! Sans
           parler du yaourt nature qui est tout simplement le meilleur de la
