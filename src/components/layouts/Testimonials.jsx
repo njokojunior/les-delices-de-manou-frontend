@@ -3,7 +3,7 @@ import React from "react";
 const Testimonials = () => {
   return (
     <section
-      id="testimonials"
+      id="apropos"
       className="bg-violet-700 text-violet-50 text-center px-6 md:px-8 lg:px-20 xl:px-24 py-10 lg:py-24 "
     >
       <h2 className="font-bold text-2xl/8 md:text-3xl/12  lg:text-5xl/18 text-center">

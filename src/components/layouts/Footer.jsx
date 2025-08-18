@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 mt-3">
           {[
             { text: "Accueil", link: "#hero" },
-            { text: "A propos", link: "#about" },
+            { text: "À propos", link: "#about" },
             { text: "Menu", link: "#" },
           ].map((el) => (
             <Button
@@ -94,9 +94,9 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3 mt-3">
           {[
-            { text: "Evenements", link: "#hero" },
-            { text: "Marriage", link: "#about" },
-            { text: "Soutenance", link: "#" },
+            { text: "Événements", link: "#hero" },
+            { text: "Mariages", link: "#about" },
+            { text: "Soutenances", link: "#" },
           ].map((el) => (
             <Button
               variant="none"
@@ -113,7 +113,7 @@ const Footer = () => {
 
       <div className="flex flex-col gap-3">
         <div className="md:text-xl text-lg  flex gap-1 items-center lg:text-3xl  logo">
-          <span className="font-bold">NewsLetter</span>
+          <span className="font-bold">Notre newsletter</span>
         </div>
         <p className="text-xs md:text-sm">
           Abonnez-vous pour recevoir nos offres spéciales et nos dernières

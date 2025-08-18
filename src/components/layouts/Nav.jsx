@@ -6,7 +6,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menu = [
     {
-      path: "#home",
+      path: "#accueil",
       text: "Acceuil",
     },
     {
@@ -14,7 +14,7 @@ const Nav = () => {
       text: "Menu",
     },
     {
-      path: "#about",
+      path: "#apropos",
       text: "Notre entreprise",
     },
   ];
@@ -83,7 +83,7 @@ const Nav = () => {
           <a href="#menu">Menu</a>
         </li>
         <li className="hover:bg-violet-50 hover:text-violet-700 hover:font-bold">
-          <a href="#a_propos">À propos</a>
+          <a href="#apropos">À propos</a>
         </li>
         <li className="hover:bg-violet-50 hover:text-violet-700 hover:font-bold">
           <a href="tel:5814461643">Contact</a>

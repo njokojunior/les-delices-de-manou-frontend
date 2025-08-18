@@ -67,7 +67,7 @@ const FeatureProducts = () => {
     },
   ];
   return (
-    <section id="feature" className="px-4 py-20 bg-white md:py-20 lg:py-40">
+    <section id="menu" className="px-4 py-20 bg-white md:py-20 lg:py-40">
       <h2 className="font-bold text-2xl/8 md:text-3xl/12  lg:text-5xl/18 text-center text-violet-700">
         Nos pâtisseries
       </h2>
